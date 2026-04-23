@@ -349,9 +349,10 @@ and for subsequent lines it's the previous line's indentation."
   `((nix
      ((parent-is "^source_code$") column-0 0)
 
-     ;; Non-indented strings are untouched.
+     ;; Non-indented strings and comments are untouched.
      ((n-p-gp nil "^string_fragment$" "^string_expression$") no-indent 0)
      ((match "^\"$" "^string_expression$" nil nil nil) no-indent 0)
+     ((parent-is "^comment$") no-indent 0)
 
      ((n-p-gp nil "^string_fragment$" "^indented_string_expression$") nix-ts-indent-multiline-string 0)
      ((match "^interpolation$" "^indented_string_expression$" nil nil nil) nix-ts-indent-multiline-string 0)

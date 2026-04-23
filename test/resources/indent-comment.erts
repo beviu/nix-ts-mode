@@ -1,0 +1,34 @@
+Name: simple-comment
+
+=-=
+{
+# This is a comment.
+a = 1;
+}
+=-=
+{
+  # This is a comment.
+  a = 1;
+}
+=-=-=
+
+
+Name: c-style-comment
+
+=-=
+{
+  /*
+    Note: This is a C-style comment. Its
+          content should be left as-is.
+  */
+  a = 1;
+}
+=-=
+{
+  /*
+    Note: This is a C-style comment. Its
+          content should be left as-is.
+  */
+  a = 1;
+}
+=-=-=
