@@ -379,6 +379,7 @@ and for subsequent lines it's the previous line's indentation."
      ((parent-is "^let_expression$") parent-bol nix-ts-mode-indent-offset)
      ((parent-is "^list_expression$") parent-bol nix-ts-mode-indent-offset)
      ((parent-is "^parenthesized_expression$") parent-bol nix-ts-mode-indent-offset)
+     ((match nil "^binary_expression$" nil 2 nil) parent-bol nix-ts-mode-indent-offset)
 
      (catch-all parent-bol 0)))
   "Tree-sitter indent rules for `nix-ts-mode'.")

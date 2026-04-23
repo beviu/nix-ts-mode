@@ -1,0 +1,23 @@
+Name: simple-binary-op
+
+=-=
+true
+&& false
+=-=
+true
+&& false
+=-=-=
+
+Name: binary-op-commented-rhs
+
+=-=
+true
+&&
+# This should be indented.
+false
+=-=
+true
+&&
+  # This should be indented.
+  false
+=-=-=
